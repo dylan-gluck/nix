@@ -22,8 +22,7 @@
         specialArgs = {inherit inputs;};
         modules = [
           nixos-hardware.nixosModules.msi-gs60
-          # nixos-hardware.nixosModules.common-gpu-nvidia
-          ./hosts/default/configuration.nix
+          ./hosts/msi/configuration.nix
         ];
       };
 
