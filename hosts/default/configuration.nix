@@ -38,7 +38,6 @@
     fish
     git
     vim
-    neovim
     gcc
     cargo
     wget
@@ -63,7 +62,9 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       firefox
+      neovim
       vscode
+      kitty
     ];
     shell = pkgs.fish;
   };
