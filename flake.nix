@@ -21,7 +21,7 @@
       msi = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-          nixos-hardware.nixosModules.ms-gs60
+          nixos-hardware.nixosModules.msi-gs60
           # nixos-hardware.nixosModules.common-gpu-nvidia
           ./hosts/default/configuration.nix
         ];
