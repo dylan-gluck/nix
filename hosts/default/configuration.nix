@@ -1,19 +1,16 @@
-{ config, pkgs, inputs,  ... }:
+{ config, pkgs,  ... }:
 
 {
   imports =
     [ 
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      # Home manager default
-      inputs.home-manager.nixosModules.default
+      ../system/hardware-configuration.nix
     ];
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; 
+  networking.hostName = "msi"; 
   # networking.wireless.enable = true;
 
   # Configure network proxy if necessary
@@ -29,23 +26,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Define user account. 
-  users.users.d = {
-    isNormalUser = true;
-    description = "d";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-    shell = pkgs.fish;
-  };
-
-  # Home manager init
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "d" = import ./home.nix;
-    };
-  };
-
   # Enable flakes
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
@@ -55,15 +35,11 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    wget
-    neovim
-    git
     fish
+    vim
+    neovim
     gcc
     cargo
-    tmux
-    zellij
-    vscode
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -77,6 +53,18 @@
   programs.fish.enable = true;
 
   environment.pathsToLink = [ "/libexec" ];
+
+  # Define user account. 
+  users.users.d = {
+    isNormalUser = true;
+    description = "d";
+    extraGroups = [ "networkmanager" "wheel" ];
+    packages = with pkgs; [
+      firefox
+      vscode
+    ];
+    shell = pkgs.fish;
+  };
 
   # List services that you want to enable:
 
@@ -98,6 +86,10 @@
        };
     };
 
+    displayManager = {
+      defaultSession = "xfce+i3";
+    };
+
     windowManager.i3 = {
        enable = true;
        extraPackages = with pkgs; [
@@ -108,24 +100,11 @@
     };
   };
 
-  services.displayManager = {
-    defaultSession = "xfce+i3";
-  };
-
   # Enable the OpenSSH daemon.
-  services.openssh = {
-    enable = true;
-    ports = [ 22 ];
-    settings = {
-      PasswordAuthentication = true;
-      AllowUsers = ["d"];
-      X11Forwarding = true;
-      PermitRootLogin = "no";
-    };
-  };
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 22 ];
+  # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
