@@ -1,11 +1,26 @@
 { config, lib, pkgs, ... }:
 {
 
+  # Additional packages
+  environment.systemPackages = with pkgs; [
+    pciutils
+    file
+    gnumake
+    gcc
+    cudatoolkit
+  ];
+
   # Enable OpenGL
   hardware.opengl = {
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
+  };
+
+  # Systemd CUDA
+  systemd.services.nvidia-control-devices = {
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig.ExecStart = "${pkgs.linuxPackages.nvidia_x11.bin}/bin/nvidia-smi";
   };
 
   # Load nvidia driver for Xorg and Wayland
@@ -43,6 +58,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
   
+  # NVIDIA Prime
   hardware.nvidia.prime = {
     offload = {
 			enable = true;
