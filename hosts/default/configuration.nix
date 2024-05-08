@@ -36,10 +36,12 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     fish
+    git
     vim
     neovim
     gcc
     cargo
+    wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -86,10 +88,6 @@
        };
     };
 
-    displayManager = {
-      defaultSession = "xfce+i3";
-    };
-
     windowManager.i3 = {
        enable = true;
        extraPackages = with pkgs; [
@@ -98,6 +96,10 @@
          i3lock
        ];
     };
+  };
+
+  services.displayManager = {
+    defaultSession = "xfce+i3";
   };
 
   # Enable the OpenSSH daemon.
