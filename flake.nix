@@ -44,21 +44,8 @@
         modules = [
           ./hosts/msi/configuration.nix
           nixos-hardware.nixosModules.msi-gs60
+          inputs.home-manager.nixosModules.msi
         ];
-      };
-    };
-    # Profiles
-    homeConfigurations = {
-      user = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        modules = [
-          ./hosts/msi/home.nix
-        ];
-        extraSpecialArgs = {
-          inherit systemSettings;
-          inherit userSettings;
-          inherit inputs;
-        };
       };
     };
   };
