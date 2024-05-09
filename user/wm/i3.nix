@@ -24,8 +24,6 @@
 
             defaultWorkspace = "workspace number 1";
 
-            bars.height = 25;
-
             gaps = {
                 inner = 10;
                 outer = 5;
