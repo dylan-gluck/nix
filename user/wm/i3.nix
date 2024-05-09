@@ -3,12 +3,12 @@
 {
     xsession.windowManager.i3 = {
         enable = true;
-        package = pkgs.i3-rounded;
+        package = pkgs.i3-gaps;
         config = {
 
-            # startup = [
-            #     { command = "" }
-            # ];
+            startup = [
+                { command = "picom" }
+            ];
 
             terminal = "kitty";
 
@@ -20,8 +20,6 @@
                 size = 11.0;
             };
 
-            # bars = [];
-
             defaultWorkspace = "workspace number 1";
 
             gaps = {
@@ -31,7 +29,7 @@
 
             window = {
                 titlebar = false;
-                border = 0;
+                border = 1;
             };
         };
     };
