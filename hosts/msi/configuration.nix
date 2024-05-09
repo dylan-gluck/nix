@@ -1,4 +1,4 @@
-{ ... }:
+{ inputs, userSettings, ... }:
 
 {
     imports = [
@@ -13,7 +13,7 @@
     home-manager = {
         extraSpecialArgs = { inherit inputs; };
         users = {
-            "d" = import ./home.nix;
+            ${userSettings.username} = import ./home.nix;
         };
     };
 }
