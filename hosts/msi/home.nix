@@ -12,25 +12,25 @@
     ../../user/shell/cli-collection.nix
   ];
 
-  home.packages = (with pkgs; [
-    alacritty
-    kitty
-    firefox
-    librewolf
-    vscode
-    gnome.nautilus
+  # home.packages = (with pkgs; [
+  #   alacritty
+  #   kitty
+  #   firefox
+  #   librewolf
+  #   vscode
+  #   gnome.nautilus
     
-    vlc
-    mpv
-    yt-dlp
+  #   vlc
+  #   mpv
+  #   yt-dlp
 
-    openvpn 
-    wireguard 
-    ivpn ivpn-ui
+  #   openvpn 
+  #   wireguard 
+  #   ivpn ivpn-ui
 
-    gcc
-    cargo
-  ]);
+  #   gcc
+  #   cargo
+  # ]);
 
   xdg.enable = true;
   xdg.userDirs = {
