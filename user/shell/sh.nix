@@ -35,9 +35,9 @@ in
     shellAliases = myAliases;
   };
 
-  home.packages = (with pkgs; [
+  home.packages = with pkgs; [
     direnv nix-direnv
-  ]);
+  ];
 
   programs.direnv.enable = true;
   programs.direnv.enableZshIntegration = true;
