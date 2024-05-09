@@ -1,10 +1,9 @@
-{ config, pkgs,  ... }:
+{ config, pkgs, userSettings,  ... }:
 
 {
   imports =
     [ 
       ../../system/hardware-configuration.nix
-      ../../user/d.nix
     ];
 
   # Bootloader
@@ -27,19 +26,40 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # User account
+  users.users.${userSettings.username} = {
+    isNormalUser = true;
+    description = userSettings.name;
+    extraGroups = [ "networkmanager" "wheel" ];
+    packages = [];
+    uid = 1000;
+  };
+
+  # System packages
   environment.systemPackages = with pkgs; [
-    fish
-    git
+    zsh
     vim
-    gcc
-    cargo
     wget
+    git
+    cryptsetup
+    home-manager
+    wpa_supplicant
   ];
 
-  # Enable system programs
-  programs.fish.enable = true;
+  # I use zsh btw
+  environment.shells = with pkgs; [ zsh ];
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
+
+  fonts.fontDir.enable = true;
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal
+      pkgs.xdg-desktop-portal-gtk
+    ];
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -49,9 +69,6 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-
-  # Environment paths
-  environment.pathsToLink = [ "/libexec" ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

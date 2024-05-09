@@ -35,6 +35,8 @@
 
   programs.dconf.enable = true;
 
+  environment.pathsToLink = [ "/libexec" ];
+
   environment.systemPackages = with pkgs; [
     picom
     lxappearance
