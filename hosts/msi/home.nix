@@ -1,4 +1,4 @@
-{config, pkgs, userSettings, ...}:
+{lib, config, pkgs, inputs, userSettings, ...}:
 
 {
   # Home Manager setup
