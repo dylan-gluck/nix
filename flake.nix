@@ -45,9 +45,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.jdoe = import ./hosts/msi/home.nix;
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
+            home-manager.users.${userSettings.username} = import ./hosts/msi/home.nix;
           }
         ];
       };
