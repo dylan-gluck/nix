@@ -59,7 +59,14 @@
     wpa_supplicant
   ];
 
-  # I use zsh btw
+  # System Variables
+  environment.variables = {
+    EDITOR = "nvim";
+    TERM = "kitty";
+    BROWSER = "firefox";
+  };
+
+  # Default Shell
   environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;

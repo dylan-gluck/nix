@@ -7,6 +7,8 @@
         config = {
             modifier = "Mod4";
 
+            fonts = [ "ComicShannsMono" ];
+
             gaps = {
                 inner = 10;
                 outer = 5;
