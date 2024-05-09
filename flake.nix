@@ -12,25 +12,7 @@
 
   outputs = { self, nixpkgs, nixos-hardware, home-manager, ... }@inputs:
 
-    let
-    # System config variables
-    systemSettings = {
-      system = "x86_64-linux"; # system arch
-      hostname = "msi"; # hostname
-    };
-
-    # User config variables
-    userSettings = {
-      username = "d";
-      name = "d";
-      editor = "nvim";
-      term = "alactritty";
-      browser = "firefox";
-    };
-
-    pkgs = import inputs.nixpkgs;
-
-    in {
+  {
     # Systems 
     nixosConfigurations = {
       default = nixpkgs.lib.nixosSystem {
