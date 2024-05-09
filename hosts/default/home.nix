@@ -7,7 +7,7 @@
   home.stateVersion = "23.11";
 
   programs.home-manager.enable = true;
-  
+
   nixpkgs.config.allowUnfree = true;
 
   imports = [
@@ -62,10 +62,10 @@
   #   "application/octet-stream" = "flstudio.desktop;";
   # };
 
-  # home.sessionVariables = {
-  #   EDITOR = userSettings.editor;
-  #   TERM = userSettings.term;
-  #   BROWSER = userSettings.browser;
-  # };
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    TERM = "kitty";
+    BROWSER = "firefox";
+  };
 
 }
