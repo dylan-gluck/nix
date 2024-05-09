@@ -32,4 +32,15 @@
   services.displayManager = {
     defaultSession = "xfce+i3";
   };
+
+  programs.dconf.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    picom
+    lxappearance
+    feh # Wallpaper
+    playerctl # Media control
+  ];
+
+  
 }
