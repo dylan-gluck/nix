@@ -1,7 +1,5 @@
 { pkgs, ... }:
 let
-
-  # My shell aliases
   myAliases = {
     ls = "eza --icons -l -T -L=1";
     cat = "bat";

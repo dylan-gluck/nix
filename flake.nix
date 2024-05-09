@@ -17,7 +17,7 @@
     systemSettings = {};
 
     # User config variables
-    userSettings = {
+    userSettings = rec {
       username = "d";
       name = "d";
       editor = "nvim";
