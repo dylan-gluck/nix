@@ -25,6 +25,8 @@
       browser = "firefox";
     };
 
+    pkgs = nixpkgs;
+
     in {
     # Systems 
     nixosConfigurations = {
