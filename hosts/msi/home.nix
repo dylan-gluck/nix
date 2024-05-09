@@ -7,10 +7,10 @@
   home.stateVersion = "23.11";
   programs.home-manager.enable = true;
 
-  imports = [
-    ../../user/shell/sh.nix
-    ../../user/shell/cli-collection.nix
-  ];
+  # imports = [
+  #   ../../user/shell/sh.nix
+  #   ../../user/shell/cli-collection.nix
+  # ];
 
   home.packages = (with pkgs; [
     alacritty
