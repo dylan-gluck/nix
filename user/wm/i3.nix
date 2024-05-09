@@ -9,11 +9,7 @@
 
             gaps = {
                 inner = 10;
-                outer = 10;
-            };
-
-            keybindings = lib.mkOptionDefault {
-                "Mod4+Enter" = "exec kitty";
+                outer = 5;
             };
         };
     };

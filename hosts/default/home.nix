@@ -69,4 +69,10 @@
     BROWSER = "firefox";
   };
 
+  environment.variables = {
+    EDITOR = "nvim";
+    TERM = "kitty";
+    BROWSER = "firefox";
+  };
+
 }

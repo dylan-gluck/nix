@@ -64,7 +64,12 @@
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
+  # Fonts
   fonts.fontDir.enable = true;
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "ComicShannsMono" "JetBrainsMono" ]; })
+  ];
+
 
   xdg.portal = {
     enable = true;
