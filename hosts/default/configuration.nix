@@ -1,9 +1,13 @@
-{ config, pkgs,  ... }:
+{ config, pkgs, inputs,  ... }:
 
 {
   imports =
     [ 
       ../../system/hardware-configuration.nix
+      ../../system/gpu/nvidia.nix
+      ../../system/wm/i3.nix
+
+      inputs.home-manager.nixosModules.default
     ];
 
   # Bootloader
@@ -33,6 +37,14 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = [];
     uid = 1000;
+  };
+
+  # Home manager init
+  home-manager = {
+      extraSpecialArgs = { inherit inputs; };
+      users = {
+          "d" = import ./home.nix;
+      };
   };
 
   # System packages
