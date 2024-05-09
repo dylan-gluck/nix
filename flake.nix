@@ -50,6 +50,7 @@
     # Profiles
     homeConfigurations = {
       user = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
         modules = [
           ./hosts/msi/home.nix
         ];
