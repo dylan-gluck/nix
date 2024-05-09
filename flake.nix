@@ -14,7 +14,10 @@
 
     let
     # System config variables
-    systemSettings = {};
+    systemSettings = {
+      system = "x86_64-linux"; # system arch
+      hostname = "msi"; # hostname
+    };
 
     # User config variables
     userSettings = rec {
