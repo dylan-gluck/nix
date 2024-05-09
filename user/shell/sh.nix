@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 let
   myAliases = {
     ls = "eza --icons -l -T -L=1";
