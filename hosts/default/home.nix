@@ -25,8 +25,7 @@
     yt-dlp
 
     openvpn 
-    wireguard 
-    ivpn ivpn-ui
+    ivpn
 
     gcc
     cargo
