@@ -7,8 +7,6 @@
         config = {
             modifier = "Mod4";
 
-            fonts = [];
-
             gaps = {
                 inner = 10;
                 outer = 10;
