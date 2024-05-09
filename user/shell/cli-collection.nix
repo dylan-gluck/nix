@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   # Collection of useful CLI apps
-  home.packages = with pkgs; [
+  home.packages = (with pkgs; [
     disfetch lolcat cowsay
     starfetch onefetch
     cava
@@ -19,5 +19,5 @@
     pciutils
     vim neovim
     lazygit
-  ];
+  ]);
 }
