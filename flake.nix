@@ -55,7 +55,6 @@
           ./hosts/msi/home.nix
         ];
         extraSpecialArgs = {
-          inherit pkgs;
           inherit systemSettings;
           inherit userSettings;
           inherit inputs;

@@ -12,7 +12,7 @@
     ../../user/shell/cli-collection.nix
   ];
 
-  home.packages = with pkgs; [
+  home.packages = (with pkgs; [
     alacritty
     kitty
     firefox
@@ -30,7 +30,7 @@
 
     gcc
     cargo
-  ];
+  ]);
 
   xdg.enable = true;
   xdg.userDirs = {
