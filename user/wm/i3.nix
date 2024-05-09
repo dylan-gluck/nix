@@ -17,7 +17,7 @@
             fonts = {
                 names = [ "ComicShannsMono" ];
                 style = "Regular Bold";
-                size = 11;
+                size = 11.0;
             };
 
             # bars = [];
