@@ -13,6 +13,7 @@
   imports = [
     ../../user/shell/sh.nix
     ../../user/shell/cli-collection.nix
+    ../../user/wm/i3.nix
   ];
 
   home.packages = with pkgs; [
