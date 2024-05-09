@@ -4,20 +4,15 @@
   imports =
     [ 
       ../../system/hardware-configuration.nix
+      ../../user/d.nix
     ];
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "msi"; 
-  # networking.wireless.enable = true;
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Enable networking
+  networking.hostName = "msi"; 
   networking.networkmanager.enable = true;
 
   # Set your time zone.
@@ -43,65 +38,8 @@
     wget
   ];
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
+  # Enable system programs
   programs.fish.enable = true;
-
-  environment.pathsToLink = [ "/libexec" ];
-
-  # Define user account. 
-  users.users.d = {
-    isNormalUser = true;
-    description = "d";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      firefox
-      neovim
-      vscode
-      kitty
-    ];
-    shell = pkgs.fish;
-  };
-
-  # List services that you want to enable:
-
-  # Display manager
-  services.xserver = {
-    enable = true;
-
-    xkb = {
-      variant = "";
-      layout = "us";
-    };
-
-    desktopManager = {
-       xterm.enable = false;
-       xfce = {
-         enable = true;
-         noDesktop = true;
-         enableXfwm = false;
-       };
-    };
-
-    windowManager.i3 = {
-       enable = true;
-       extraPackages = with pkgs; [
-         dmenu
-         i3status
-         i3lock
-       ];
-    };
-  };
-
-  services.displayManager = {
-    defaultSession = "xfce+i3";
-  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -111,6 +49,9 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  # Environment paths
+  environment.pathsToLink = [ "/libexec" ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
