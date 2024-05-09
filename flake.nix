@@ -44,7 +44,7 @@
         modules = [
           ./hosts/msi/configuration.nix
           nixos-hardware.nixosModules.msi-gs60
-          inputs.home-manager.nixosModules.msi
+          home-manager.nixosModules.msi
         ];
       };
     };
