@@ -1,4 +1,4 @@
-{ config, pkgs, userSettings,  ... }:
+{ config, pkgs,  ... }:
 
 {
   imports =
@@ -27,9 +27,9 @@
   nixpkgs.config.allowUnfree = true;
 
   # User account
-  users.users.${userSettings.username} = {
+  users.users.d = {
     isNormalUser = true;
-    description = userSettings.name;
+    description = "d";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = [];
     uid = 1000;

@@ -1,11 +1,10 @@
-{config, pkgs, userSettings, ...}:
+{config, pkgs, ...}:
 
 {
   # Home Manager setup
-  home.username = userSettings.username;
-  home.homeDirectory = "/home/"+userSettings.username;
+  home.username = "d";
+  home.homeDirectory = "/home/d";
   home.stateVersion = "23.11";
-
   programs.home-manager.enable = true;
 
   imports = [
@@ -54,17 +53,17 @@
       XDG_BOOK_DIR = "${config.home.homeDirectory}/Media/Books";
     };
   };
-  
+
   # xdg.mime.enable = true;
   # xdg.mimeApps.enable = true;
   # xdg.mimeApps.associations.added = {
   #   "application/octet-stream" = "flstudio.desktop;";
   # };
 
-  home.sessionVariables = {
-    EDITOR = userSettings.editor;
-    TERM = userSettings.term;
-    BROWSER = userSettings.browser;
-  };
+  # home.sessionVariables = {
+  #   EDITOR = userSettings.editor;
+  #   TERM = userSettings.term;
+  #   BROWSER = userSettings.browser;
+  # };
 
 }
