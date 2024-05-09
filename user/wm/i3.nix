@@ -22,6 +22,10 @@
 
             # bars = [];
 
+            defaultWorkspace = "workspace number 1";
+
+            bar.height = 25;
+
             gaps = {
                 inner = 10;
                 outer = 5;
