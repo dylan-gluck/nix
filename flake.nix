@@ -55,8 +55,8 @@
           ./hosts/msi/home.nix
         ];
         extraSpecialArgs = {
-          # inherit systemSettings;
-          # inherit userSettings;
+          inherit systemSettings;
+          inherit userSettings;
           inherit inputs;
         };
       };
