@@ -7,7 +7,7 @@
         config = {
 
             startup = [
-                { command = "picom" }
+                { command = "picom"; }
             ];
 
             terminal = "kitty";
