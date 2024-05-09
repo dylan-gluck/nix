@@ -52,7 +52,7 @@
       user = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
-          ./hosts/msi/home.nix
+          # ./hosts/msi/home.nix
         ];
         extraSpecialArgs = {
           inherit systemSettings;
