@@ -28,28 +28,33 @@
     in {
     # Systems 
     nixosConfigurations = {
-      
       default = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/default/configuration.nix
         ];
       };
-
       msi = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/msi/configuration.nix
           nixos-hardware.nixosModules.msi-gs60
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.${userSettings.username} = import ./hosts/msi/home.nix;
-          }
         ];
       };
-
+    };
+    # Profiles
+    homeConfigurations = {
+      user = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          ./hosts/msi/home.nix
+        ];
+        extraSpecialArgs = {
+          inherit systemSettings;
+          inherit userSettings;
+          inherit inputs;
+        };
+      };
     };
   };
 
