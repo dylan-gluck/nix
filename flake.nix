@@ -28,6 +28,8 @@
       browser = "firefox";
     };
 
+    pkgs = import inputs.nixpkgs;
+
     in {
     # Systems 
     nixosConfigurations = {
