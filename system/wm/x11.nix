@@ -19,7 +19,6 @@
     excludePackages = [ pkgs.xterm ];
 
     displayManager = {
-      lightdm.enable = true;
       lightdm = {
         enable = true;
         greeters.slick.enable = true;
