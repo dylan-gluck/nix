@@ -16,7 +16,6 @@
   outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
-      extraSpecialArgs = { inherit inputs; };
       modules = [
         ./hosts/default/configuration.nix
         inputs.nixos-hardware.nixosModules.msi-gs60
