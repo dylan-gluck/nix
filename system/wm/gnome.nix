@@ -33,7 +33,7 @@
     gnome-extensions-cli
   ];
 
-  services.udev.packages = [ pkgs.gnome.gnome-settings-daemon ]
+  services.udev.packages = [ pkgs.gnome.gnome-settings-daemon ];
 
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
