@@ -75,11 +75,11 @@
       hardware.nvidia = {
         prime.sync.enable = lib.mkForce true;
         prime.offload = {
-          enable = mkForce false;
-          enableOffloadCmd = mkForce false;
+          enable = lib.mkForce false;
+          enableOffloadCmd = lib.mkForce false;
         };
       };
     };
   };
-  
+
 }
