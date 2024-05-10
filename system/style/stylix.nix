@@ -38,14 +38,10 @@
   stylix.targets.console.enable = true;
   stylix.targets.lightdm.enable = true;
   
-  stylix.targets.gnome.enable = false;
-  
   services.xserver.displayManager.lightdm = {
       greeters.slick.enable = true;
       greeters.slick.theme.name = "Adwaita-dark";
   };
-
-  programs.dconf.enable = true;
 
   environment.sessionVariables = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
