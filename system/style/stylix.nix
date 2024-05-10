@@ -7,6 +7,11 @@
     polarity = "dark";
     image = ../../wallpaper/bg.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
+    cursor = {
+      name = "macOS-BigSur";
+      package = pkgs.apple-cursor;
+      size = 24;
+    };
     fonts = {
       monospace = {
         name = "ComicShannsMono";
