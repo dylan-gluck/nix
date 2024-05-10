@@ -9,7 +9,7 @@
 
     xsession.windowManager.i3 = {
         enable = true;
-        package = pkgs.i3-rounded;
+        package = pkgs.i3-gaps;
         config = {
 
             startup = [
