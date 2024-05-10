@@ -3,7 +3,7 @@
 {
   imports = [ inputs.stylix.nixosModules.stylix ];
 
-  stylix.autoEnable = false;
+  stylix.autoEnable = true;
   
   stylix.polarity = "dark";
 
@@ -34,30 +34,6 @@
       popups = 12;
       desktop = 12;
     };
-  };
-
-  stylix.targets.console.enable = true;
-  stylix.targets.lightdm.enable = true;
-
-  stylix.targets.kitty.enable = true;
-  stylix.targets.alacritty.enable = true;
-  
-  stylix.targets.kde.enable = true;
-  stylix.targets.gnome.enable = true;
-  stylix.targets.gtk.enable = true;
-  
-  stylix.targets.rofi.enable = true;
-  stylix.targets.feh.enable = true;
-
-  programs.feh.enable = true;
-
-  services.xserver.displayManager.lightdm = {
-      greeters.slick.enable = true;
-      greeters.slick.theme.name = "Adwaita-dark";
-  };
-
-  environment.sessionVariables = {
-    QT_QPA_PLATFORMTHEME = "qt5ct";
   };
 
 }
