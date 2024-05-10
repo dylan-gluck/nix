@@ -21,14 +21,11 @@
   environment.systemPackages = [
     pkgs.gnome.gnome-tweaks
     pkgs.gnome.gnome-software
-    pkgs.gnomeExtensions.appindicator
-    pkgs.gnomeExtensions.pop-shell
     pkgs.gnomeExtensions.zen
+    pkgs.gnomeExtensions.pop-shell
     pkgs.gnomeExtensions.custom-osd
     pkgs.gnomeExtensions.just-perfection
-    pkgs.gnomeExtensions.workspace-matrix
-    pkgs.gnomeExtensions.workspaces-indicator-by-open-apps
-    pkgs.gnomeExtensions.suppress-startup-animation
+    pkgs.gnomeExtensions.caffeine
     pkgs.gnome-extension-manager
     pkgs.gnome-extensions-cli
   ];
