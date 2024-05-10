@@ -13,6 +13,8 @@
     ../../user/wm/xmonad/xmonad.nix
     ../../user/shell/sh.nix
     ../../user/shell/cli-collection.nix
+    ../../user/lang/cc/cc.nix
+    ../../user/lang/python/python.nix
     ../../user/app/git/git.nix
     ../../user/app/ranger/ranger.nix
     ../../user/app/keepass/keepass.nix
