@@ -14,8 +14,7 @@
 
             startup = [
                 { command = "~/.fehbg-stylix;"; }
-                { command = "picom --animations"; }
-
+                { command = "picom;"; }
             ];
 
             terminal = "kitty";
