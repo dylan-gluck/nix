@@ -8,7 +8,7 @@
     image = ../../wallpaper/bg.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
     cursor = {
-      name = "macOs";
+      name = "macOS-BigSur";
       package = pkgs.apple-cursor;
       size = 24;
     };
