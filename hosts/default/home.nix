@@ -7,13 +7,20 @@
   home.stateVersion = "23.11";
 
   programs.home-manager.enable = true;
-
   nixpkgs.config.allowUnfree = true;
 
   imports = [
+    ../../user/wm/i3/i3.nix
     ../../user/shell/sh.nix
     ../../user/shell/cli-collection.nix
-    ../../user/wm/i3.nix
+    ../../user/app/git/git.nix
+    ../../user/app/ranger/ranger.nix
+    ../../user/app/keepass/keepass.nix
+    ../../user/app/virtualization/virtualization.nix
+    ../../user/app/terminal/kitty.nix
+    ../../user/app/terminal/alacritty.nix
+    ../../user/style/stylix.nix
+    ../../user/hardware/bluetooth.nix
   ];
 
   home.packages = with pkgs; [

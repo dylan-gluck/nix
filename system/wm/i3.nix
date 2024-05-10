@@ -1,24 +1,14 @@
 { pkgs, ... }:
 
 {
+  # import X11 config
+  imports = [ ./x11.nix
+              ./pipewire.nix
+              ./dbus.nix
+            ];
+
   # Display manager
   services.xserver = {
-    enable = true;
-
-    xkb = {
-      variant = "";
-      layout = "us";
-    };
-
-    desktopManager = {
-       xterm.enable = false;
-       xfce = {
-         enable = true;
-         noDesktop = true;
-         enableXfwm = false;
-       };
-    };
-
     windowManager.i3 = {
        enable = true;
        extraPackages = with pkgs; [
@@ -30,7 +20,7 @@
   };
 
   services.displayManager = {
-    defaultSession = "xfce+i3";
+    defaultSession = "none+i3";
   };
 
   programs.dconf.enable = true;
