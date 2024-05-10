@@ -6,7 +6,7 @@
     autoEnable = false;
     polarity = "dark";
     image = ../../wallpaper/bg.jpg;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
     cursor = {
       name = "macOS-BigSur";
       package = pkgs.apple-cursor;

@@ -6,7 +6,7 @@
     autoEnable = true;
     polarity = "dark";
     image = ../../wallpaper/bg.jpg;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
     cursor = {
       name = "macOS-BigSur";
       package = pkgs.apple-cursor;
@@ -45,7 +45,7 @@
   stylix.targets.feh.enable = true;
   stylix.targets.fish.enable = true;
 
-  home.file.".currenttheme".text = "tokyo-night-storm";
+  home.file.".currenttheme".text = "tokyo-night-dark";
 
   home.file.".fehbg-stylix".text = ''
     #!/bin/sh
