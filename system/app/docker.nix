@@ -1,23 +1,13 @@
-{ pkgs, lib, userSettings, storageDriver ? null, ... }:
-
-assert lib.asserts.assertOneOf "storageDriver" storageDriver [
-  null
-  "aufs"
-  "btrfs"
-  "devicemapper"
-  "overlay"
-  "overlay2"
-  "zfs"
-];
+{ pkgs, lib, ... }:
 
 {
   virtualisation.docker = {
     enable = true;
     enableOnBoot = true;
-    storageDriver = storageDriver;
+    storageDriver = null;
     autoPrune.enable = true;
   };
-  users.users.${userSettings.username}.extraGroups = [ "docker" ];
+  users.users.d.extraGroups = [ "docker" ];
   environment.systemPackages = with pkgs; [
     docker
     docker-compose
