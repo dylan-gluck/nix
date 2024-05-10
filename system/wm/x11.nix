@@ -10,12 +10,9 @@
   # Configure X11
   services.xserver = {
     enable = true;
-    
-    xkb = {
-      layout = "us";
-      variant = "";
-    };
-
+    layout = "us";
+    xkbVariant = "";
+    xkbOptions = "caps:escape";
     excludePackages = [ pkgs.xterm ];
 
     displayManager = {

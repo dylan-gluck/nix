@@ -4,7 +4,7 @@
   # Home Manager setup
   home.username = "d";
   home.homeDirectory = "/home/d";
-  home.stateVersion = "23.11";
+  home.stateVersion = "22.11";
 
   programs.home-manager.enable = true;
   nixpkgs.config.allowUnfree = true;
@@ -20,7 +20,7 @@
     ../../user/app/terminal/kitty.nix
     ../../user/app/terminal/alacritty.nix
     ../../user/hardware/bluetooth.nix
-    # ../../user/style/stylix.nix
+    ../../user/style/stylix.nix
   ];
 
   home.packages = with pkgs; [
