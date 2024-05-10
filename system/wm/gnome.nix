@@ -19,7 +19,13 @@
   };
 
   environment.systemPackages = [
+    pkgs.gnome.gnome-tweaks
     pkgs.gnomeExtensions.pop-shell
+    pkgs.gnomeExtensions.zen
+    pkgs.gnomeExtensions.just-perfection
+    pkgs.gnomeExtensions.workspace-matrix
+    pkgs.gnomeExtensions.workspaces-indicator-by-open-apps
+    pkgs.gnomeExtensions.suppress-startup-animation
   ];
 
   environment.gnome.excludePackages = (with pkgs; [
