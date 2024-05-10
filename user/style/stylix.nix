@@ -8,7 +8,7 @@ let
 in
 {
 
-  imports = [ inputs.stylix.homeManagerModules.stylix ];
+  imports = [ inputs.stylix.nixosModules.stylix ];
 
   home.file.".currenttheme".text = "nord";
 
@@ -47,7 +47,7 @@ in
     };
   };
 
-  # stylix.targets.i3.enable = true;
+  stylix.targets.i3.enable = true;
   stylix.targets.kitty.enable = true;
   stylix.targets.alacritty.enable = true;
   stylix.targets.kde.enable = true;
