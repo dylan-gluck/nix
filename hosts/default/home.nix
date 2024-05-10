@@ -19,8 +19,8 @@
     ../../user/app/virtualization/virtualization.nix
     ../../user/app/terminal/kitty.nix
     ../../user/app/terminal/alacritty.nix
-    ../../user/style/stylix.nix
     ../../user/hardware/bluetooth.nix
+    ../../user/style/stylix.nix
   ];
 
   home.packages = with pkgs; [
