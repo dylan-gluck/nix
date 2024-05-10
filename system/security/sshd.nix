@@ -1,4 +1,4 @@
-{ userSettings, authorizedKeys ? [], ... }:
+{ ... }:
 
 {
   # Enable incoming ssh
@@ -10,5 +10,4 @@
       PermitRootLogin = "no";
     };
   };
-  users.users.${userSettings.username}.openssh.authorizedKeys.keys = authorizedKeys;
 }
