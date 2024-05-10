@@ -69,4 +69,17 @@
     intelBusId = "PCI:0:2:0";
     nvidiaBusId = "PCI:1:0:0";
   };
+
+  specialisation = {
+    game-time.configuration = {
+      hardware.nvidia = {
+        prime.sync.enable = lib.mkForce true;
+        prime.offload = {
+          enable = mkForce false;
+          enableOffloadCmd = mkForce false;
+        };
+      };
+    };
+  };
+  
 }
