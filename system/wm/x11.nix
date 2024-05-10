@@ -33,9 +33,10 @@
     '';
     };
     
-    libinput = {
-      touchpad.disableWhileTyping = true;
-    };
+  };
+  
+  services.libinput = {
+    touchpad.disableWhileTyping = true;
   };
 
   environment.sessionVariables = {

@@ -1,6 +1,12 @@
 {pkgs, ...}:
 
 {
+  imports = [
+    ./dbus.nix
+    ./pipewire.nix
+    ./fonts.nix
+  ];
+
   services.xserver = {
     enable = true;
 
