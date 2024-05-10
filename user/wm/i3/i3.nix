@@ -24,7 +24,7 @@
             fonts = {
                 names = [ "ComicShannsMono" ];
                 style = "Regular Bold";
-                size = 11.0;
+                size = 12.0;
             };
 
             defaultWorkspace = "workspace number 1";
