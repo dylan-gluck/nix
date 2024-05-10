@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     picom
+    pcre.dev
   ];
 
   nixpkgs.overlays = [

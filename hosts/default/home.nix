@@ -20,7 +20,7 @@
     ../../user/app/terminal/kitty.nix
     ../../user/app/terminal/alacritty.nix
     ../../user/hardware/bluetooth.nix
-    # ../../user/style/stylix.nix
+    ../../user/style/stylix.nix
   ];
 
   home.packages = with pkgs; [

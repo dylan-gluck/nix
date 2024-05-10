@@ -12,7 +12,7 @@
       ../../system/hardware/nvidia.nix
       
       ../../system/wm/i3.nix
-      # ../../system/style/stylix.nix
+      ../../system/style/stylix.nix
       
       ../../system/app/virtualization.nix
       ../../system/app/docker.nix
@@ -110,6 +110,7 @@
       pkgs.xdg-desktop-portal
       pkgs.xdg-desktop-portal-gtk
     ];
+    config.common.default = "*";
   };
 
   # This value determines the NixOS release from which the default
