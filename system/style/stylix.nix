@@ -5,7 +5,7 @@
   imports = [ inputs.stylix.homeManagerModules.stylix ];
 
   stylix = {
-    autoEnable = true;
+    autoEnable = false;
     polarity = "dark";
     image = ../../wallpaper/bg.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
@@ -33,6 +33,20 @@
         desktop = 12;
       };
     };
+  };
+
+  stylix.targets.console.enable = true;
+  stylix.targets.lightdm.enable = true;
+  
+  services.xserver.displayManager.lightdm = {
+      greeters.slick.enable = true;
+      greeters.slick.theme.name = myLightDMTheme;
+  };
+
+  programs.dconf.enable = true;
+
+  environment.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qt5ct";
   };
 
 }

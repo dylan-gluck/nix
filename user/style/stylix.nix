@@ -4,6 +4,43 @@
 
   imports = [ inputs.stylix.homeManagerModules.stylix ];
 
+  stylix = {
+    autoEnable = false;
+    polarity = "dark";
+    image = ../../wallpaper/bg.jpg;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
+    fonts = {
+      monospace = {
+        name = "Intel One Mono";
+        package = pkgs.intel-one-mono;
+      };
+      serif = {
+        name = "Intel One Mono";
+        package = pkgs.intel-one-mono;
+      };
+      sansSerif = {
+        name = "Intel One Mono";
+        package = pkgs.intel-one-mono;
+      };
+      emoji = {
+        name = "Noto Color Emoji";
+        package = pkgs.noto-fonts-emoji-blob-bin;
+      };
+      sizes = {
+        terminal = 12;
+        applications = 12;
+        popups = 12;
+        desktop = 12;
+      };
+    };
+  };
+
+  stylix.targets.kitty.enable = true;
+  stylix.targets.alacritty.enable = true;
+  stylix.targets.gtk.enable = true;
+  stylix.targets.rofi.enable = true;
+  stylix.targets.feh.enable = true;
+
   home.file.".currenttheme".text = "tokyo-night-storm";
 
   home.file.".fehbg-stylix".text = ''
