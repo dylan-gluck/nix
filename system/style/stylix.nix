@@ -1,4 +1,4 @@
-{ lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 let
   themePath = "../../../themes/nord/nord.yaml";
@@ -17,7 +17,7 @@ in
    sha256 = backgroundSha256;
   };
   
-  # stylix.base16Scheme = ./. + themePath;
+  stylix.base16Scheme = ./. + themePath;
   
   stylix.fonts = {
     monospace = {
