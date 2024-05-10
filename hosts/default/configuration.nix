@@ -101,7 +101,7 @@
 
   # Default Shell
   environment.shells = with pkgs; [ zsh fish ];
-  users.defaultUserShell = pkgs.fish;
+  users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
   programs.fish.enable = true;
 
