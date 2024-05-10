@@ -3,8 +3,6 @@
 {
   imports = [ inputs.stylix.nixosModules.stylix ];
 
-  imports = [ inputs.stylix.nixosModules.stylix ];
-
   stylix.autoEnable = false;
   
   stylix.polarity = "dark";
