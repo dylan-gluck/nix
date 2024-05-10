@@ -2,8 +2,8 @@
 
 {
   home.packages = with pkgs; [
+    hyperscan
     picom
-    pcre.dev
   ];
 
   nixpkgs.overlays = [
