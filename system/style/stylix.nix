@@ -3,7 +3,7 @@
 {
   imports = [ inputs.stylix.nixosModules.stylix ];
 
-  stylix.autoEnable = true;
+  stylix.autoEnable = false;
   
   stylix.polarity = "dark";
 
@@ -35,6 +35,19 @@
       desktop = 12;
     };
   };
+
+  stylix.targets.console.enable = true;
+  stylix.targets.lightdm.enable = true;
+
+  stylix.targets.kitty.enable = true;
+  stylix.targets.alacritty.enable = true;
+  
+  stylix.targets.kde.enable = true;
+  stylix.targets.gnome.enable = true;
+  stylix.targets.gtk.enable = true;
+  
+  stylix.targets.rofi.enable = true;
+  stylix.targets.feh.enable = true;
 
   programs.feh.enable = true;
 
