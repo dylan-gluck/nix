@@ -9,16 +9,16 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
     fonts = {
       monospace = {
-        name = "Intel One Mono";
-        package = pkgs.intel-one-mono;
+        name = "ComicShannsMono";
+        package = (pkgs.nerdfonts.override { fonts = [ "ComicShannsMono" ]; });
       };
       serif = {
-        name = "Intel One Mono";
-        package = pkgs.intel-one-mono;
+        name = "ComicShannsMono";
+        package = (pkgs.nerdfonts.override { fonts = [ "ComicShannsMono" ]; });
       };
       sansSerif = {
-        name = "Intel One Mono";
-        package = pkgs.intel-one-mono;
+        name = "ComicShannsMono";
+        package = (pkgs.nerdfonts.override { fonts = [ "ComicShannsMono" ]; });
       };
       emoji = {
         name = "Noto Color Emoji";

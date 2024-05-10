@@ -27,6 +27,7 @@
     alacritty
     kitty
     firefox
+    chromium
     librewolf
     vscode
     gnome.nautilus

@@ -15,6 +15,11 @@ let
   };
 in
 {
+  programs.fish = {
+    enable = true;
+    shellAliases = myAliases;
+  };
+
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;

@@ -3,22 +3,22 @@
 {
 
   stylix = {
-    autoEnable = false;
+    autoEnable = true;
     polarity = "dark";
     image = ../../wallpaper/bg.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
     fonts = {
       monospace = {
-        name = "Intel One Mono";
-        package = pkgs.intel-one-mono;
+        name = "ComicShannsMono";
+        package = (pkgs.nerdfonts.override { fonts = [ "ComicShannsMono" ]; });
       };
       serif = {
-        name = "Intel One Mono";
-        package = pkgs.intel-one-mono;
+        name = "ComicShannsMono";
+        package = (pkgs.nerdfonts.override { fonts = [ "ComicShannsMono" ]; });
       };
       sansSerif = {
-        name = "Intel One Mono";
-        package = pkgs.intel-one-mono;
+        name = "ComicShannsMono";
+        package = (pkgs.nerdfonts.override { fonts = [ "ComicShannsMono" ]; });
       };
       emoji = {
         name = "Noto Color Emoji";
@@ -38,6 +38,7 @@
   stylix.targets.gtk.enable = true;
   stylix.targets.rofi.enable = true;
   stylix.targets.feh.enable = true;
+  stylix.targets.fish.enable = true;
 
   home.file.".currenttheme".text = "tokyo-night-storm";
 

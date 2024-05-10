@@ -100,9 +100,10 @@
   };
 
   # Default Shell
-  environment.shells = with pkgs; [ zsh ];
-  users.defaultUserShell = pkgs.zsh;
+  environment.shells = with pkgs; [ zsh fish ];
+  users.defaultUserShell = pkgs.fish;
   programs.zsh.enable = true;
+  programs.fish.enable = true;
 
   xdg.portal = {
     enable = true;
