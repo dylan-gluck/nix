@@ -54,7 +54,7 @@
 
   services.xserver.displayManager.lightdm = {
       greeters.slick.enable = true;
-      greeters.slick.theme.name = myLightDMTheme;
+      greeters.slick.theme.name = "Adwaita-dark";
   };
 
   environment.sessionVariables = {
