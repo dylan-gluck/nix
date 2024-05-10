@@ -5,7 +5,7 @@
   stylix = {
     autoEnable = true;
     polarity = "dark";
-    image = ../../wallpaper/bg.jpg;
+    image = ../../wallpaper/wwdc-2023-8k-swirls-3840x2160-12596.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
     cursor = {
       name = "macOS-BigSur";
