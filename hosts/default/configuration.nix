@@ -5,7 +5,7 @@
     [ 
       ../../system/hardware-configuration.nix
       ../../system/hardware/kernel.nix
-      ../../system/hardware/power.nix
+      # ../../system/hardware/power.nix
       ../../system/hardware/time.nix
       ../../system/hardware/printing.nix
       ../../system/hardware/bluetooth.nix
