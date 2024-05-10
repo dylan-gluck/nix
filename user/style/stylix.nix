@@ -1,10 +1,10 @@
 { config, lib, pkgs, inputs, ... }:
 
 let
-  themePath = "../../themes/nord/nord.yaml";
+  themePath = "../../../themes/nord/nord.yaml";
   themePolarity = "dark";
-  backgroundUrl = builtins.readFile (./. + "../../themes/nord/backgroundurl.txt");
-  backgroundSha256 = builtins.readFile (./. + "../../themes/nord/backgroundsha256.txt");
+  backgroundUrl = builtins.readFile (./. + "../../../themes/nord/backgroundurl.txt");
+  backgroundSha256 = builtins.readFile (./. + "../../../themes/nord/backgroundsha256.txt");
 in
 {
 
@@ -47,7 +47,7 @@ in
     };
   };
 
-  stylix.targets.i3.enable = true;
+  # stylix.targets.i3.enable = true;
   stylix.targets.kitty.enable = true;
   stylix.targets.alacritty.enable = true;
   stylix.targets.kde.enable = true;
