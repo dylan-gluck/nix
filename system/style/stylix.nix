@@ -1,11 +1,11 @@
 { lib, pkgs, inputs, ... }:
 
 let
-  themePath = "../../../themes/nord/nord.yaml";
+  themePath = "../../themes/nord/nord.yaml";
   themePolarity = "dark";
   myLightDMTheme = if themePolarity == "light" then "Adwaita" else "Adwaita-dark";
-  backgroundUrl = builtins.readFile (./. + "../../../themes/nord/backgroundurl.txt");
-  backgroundSha256 = builtins.readFile (./. + "../../../themes//nord/backgroundsha256.txt");
+  backgroundUrl = builtins.readFile (./. + "../../themes/nord/backgroundurl.txt");
+  backgroundSha256 = builtins.readFile (./. + "../../themes/nord/backgroundsha256.txt");
 in
 {
   imports = [ inputs.stylix.nixosModules.stylix ];
