@@ -29,8 +29,8 @@
     pkgs.gnomeExtensions.workspace-matrix
     pkgs.gnomeExtensions.workspaces-indicator-by-open-apps
     pkgs.gnomeExtensions.suppress-startup-animation
-    gnome-extension-manager
-    gnome-extensions-cli
+    pkgs.gnome-extension-manager
+    pkgs.gnome-extensions-cli
   ];
 
   services.udev.packages = [ pkgs.gnome.gnome-settings-daemon ];
