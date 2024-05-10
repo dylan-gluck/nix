@@ -11,7 +11,7 @@
       ../../system/hardware/bluetooth.nix
       ../../system/hardware/nvidia.nix
       
-      ../../system/wm/i3.nix
+      ../../system/wm/xmonad.nix
       ../../system/style/stylix.nix
       
       ../../system/app/virtualization.nix

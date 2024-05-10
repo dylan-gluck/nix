@@ -10,7 +10,7 @@
   nixpkgs.config.allowUnfree = true;
 
   imports = [
-    ../../user/wm/i3/i3.nix
+    ../../user/wm/xmonad/xmonad.nix
     ../../user/shell/sh.nix
     ../../user/shell/cli-collection.nix
     ../../user/app/git/git.nix
