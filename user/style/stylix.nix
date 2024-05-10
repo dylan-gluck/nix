@@ -2,8 +2,6 @@
 
 {
 
-  imports = [ inputs.stylix.homeManagerModules.stylix ];
-
   stylix = {
     autoEnable = false;
     polarity = "dark";
