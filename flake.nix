@@ -17,9 +17,10 @@
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./hosts/default/configuration.nix
         inputs.nixos-hardware.nixosModules.msi-gs60
         inputs.home-manager.nixosModules.default
+        inputs.stylix.nixosModules.stylix
+        ./hosts/default/configuration.nix
       ];
     };
   };
