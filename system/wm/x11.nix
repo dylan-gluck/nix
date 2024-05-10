@@ -34,12 +34,21 @@
     };
     
   };
-  
+
   services.libinput = {
     touchpad.disableWhileTyping = true;
   };
 
   environment.sessionVariables = {
     QT_QPA_PLATFORMTHEME = "qt5ct";
+  };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal
+      pkgs.xdg-desktop-portal-gtk
+    ];
+    config.common.default = "*";
   };
 }

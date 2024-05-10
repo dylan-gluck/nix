@@ -34,6 +34,6 @@
   };
 
   stylix.targets.console.enable = true;
-  stylix.targets.lightdm.enable = true;
+  stylix.targets.gnome.enable = true;
 
 }
