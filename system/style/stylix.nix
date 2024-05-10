@@ -1,6 +1,8 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
+
+  imports = [ inputs.stylix.homeManagerModules.stylix ];
 
   stylix = {
     autoEnable = true;

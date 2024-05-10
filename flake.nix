@@ -20,7 +20,6 @@
         ./hosts/default/configuration.nix
         inputs.nixos-hardware.nixosModules.msi-gs60
         inputs.home-manager.nixosModules.default
-        inputs.stylix.nixosModules.stylix
       ];
     };
   };
