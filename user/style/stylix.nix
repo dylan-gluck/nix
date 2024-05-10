@@ -40,6 +40,7 @@
   stylix.targets.gtk.enable = true;
   stylix.targets.rofi.enable = true;
   stylix.targets.feh.enable = true;
+  stylix.targets.gnome.enable = false;
 
   home.file.".currenttheme".text = "tokyo-night-storm";
 

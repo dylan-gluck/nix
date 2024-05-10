@@ -38,6 +38,8 @@
   stylix.targets.console.enable = true;
   stylix.targets.lightdm.enable = true;
   
+  stylix.targets.gnome.enable = false;
+  
   services.xserver.displayManager.lightdm = {
       greeters.slick.enable = true;
       greeters.slick.theme.name = "Adwaita-dark";
