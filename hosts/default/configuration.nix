@@ -12,7 +12,7 @@
       ../../system/hardware/nvidia.nix
       
       ../../system/wm/i3.nix
-      ../../system/style/stylix.nix
+      # ../../system/style/stylix.nix
       
       ../../system/app/virtualization.nix
       ../../system/app/docker.nix

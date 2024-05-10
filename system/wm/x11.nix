@@ -20,6 +20,11 @@
 
     displayManager = {
       lightdm.enable = true;
+      lightdm = {
+        enable = true;
+        greeters.slick.enable = true;
+        greeters.slick.theme.name = "Adwaita-dark";
+      };
       sessionCommands = ''
       xset -dpms
       xset s blank
@@ -32,5 +37,9 @@
     libinput = {
       touchpad.disableWhileTyping = true;
     };
+  };
+
+  environment.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qt5ct";
   };
 }
