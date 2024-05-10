@@ -18,6 +18,10 @@
     desktopManager.gnome.enable = true;
   };
 
+  environment.systemPackages = [
+    pkgs.gnomeExtensions.pop-shell
+  ];
+
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
