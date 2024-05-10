@@ -20,13 +20,20 @@
 
   environment.systemPackages = [
     pkgs.gnome.gnome-tweaks
+    pkgs.gnome.gnome-software
+    pkgs.gnomeExtensions.appindicator
     pkgs.gnomeExtensions.pop-shell
     pkgs.gnomeExtensions.zen
+    pkgs.gnomeExtensions.custom-osd
     pkgs.gnomeExtensions.just-perfection
     pkgs.gnomeExtensions.workspace-matrix
     pkgs.gnomeExtensions.workspaces-indicator-by-open-apps
     pkgs.gnomeExtensions.suppress-startup-animation
+    gnome-extension-manager
+    gnome-extensions-cli
   ];
+
+  services.udev.packages = [ pkgs.gnome.gnome-settings-daemon ]
 
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
