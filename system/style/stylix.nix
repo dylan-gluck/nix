@@ -16,7 +16,9 @@ in
    url = backgroundUrl;
    sha256 = backgroundSha256;
   };
+  
   stylix.base16Scheme = ./. + themePath;
+  
   stylix.fonts = {
     monospace = {
       name = "Intel One Mono";
