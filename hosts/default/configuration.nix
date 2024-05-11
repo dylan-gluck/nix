@@ -18,6 +18,7 @@
       ../../system/app/docker.nix
       ../../system/app/flatpak.nix
       ../../system/app/steam.nix
+      ../../system/app/emulators.nix
       ../../system/app/gamemode.nix
       ../../system/app/prismlauncher.nix
 

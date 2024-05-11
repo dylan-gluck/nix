@@ -22,7 +22,7 @@
             modifier = "Mod4";
 
             fonts = {
-                names = [ "ComicShannsMono" ];
+                names = [ "ComicShannsMono Nerd Font" ];
                 style = "Regular Bold";
                 size = 12.0;
             };

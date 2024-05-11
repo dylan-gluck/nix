@@ -14,15 +14,15 @@
     };
     fonts = {
       monospace = {
-        name = "ComicShannsMono";
+        name = "ComicShannsMono Nerd Font";
         package = (pkgs.nerdfonts.override { fonts = [ "ComicShannsMono" ]; });
       };
       serif = {
-        name = "ComicShannsMono";
+        name = "ComicShannsMono Nerd Font";
         package = (pkgs.nerdfonts.override { fonts = [ "ComicShannsMono" ]; });
       };
       sansSerif = {
-        name = "ComicShannsMono";
+        name = "ComicShannsMono Nerd Font";
         package = (pkgs.nerdfonts.override { fonts = [ "ComicShannsMono" ]; });
       };
       emoji = {
