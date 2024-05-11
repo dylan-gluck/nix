@@ -19,15 +19,15 @@
   };
 
   environment.systemPackages = [
-    pkgs.gnome.gnome-tweaks
     pkgs.gnome.gnome-software
-    pkgs.gnomeExtensions.zen
-    pkgs.gnomeExtensions.pop-shell
-    pkgs.gnomeExtensions.custom-osd
-    pkgs.gnomeExtensions.just-perfection
-    pkgs.gnomeExtensions.caffeine
+    pkgs.gnome.gnome-tweaks
     pkgs.gnome-extension-manager
-    pkgs.gnome-extensions-cli
+    pkgs.gnomeExtensions.pop-shell
+    pkgs.gnomeExtensions.just-perfection
+    pkgs.gnomeExtensions.unite
+    pkgs.gnomeExtensions.zen
+    pkgs.gnomeExtensions.custom-osd
+    pkgs.gnomeExtensions.caffeine
   ];
 
   services.udev.packages = [ pkgs.gnome.gnome-settings-daemon ];

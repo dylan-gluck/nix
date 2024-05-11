@@ -75,7 +75,7 @@
 
   # Home manager init
   home-manager = {
-      backupFileExtension = "backup";
+      backupFileExtension = "hm-backup";
       extraSpecialArgs = { inherit inputs; };
       users = {
           "d" = import ./home.nix;
